@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <title>Contact'Tel</title>
+        <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <!-- Liste Contact -->
+        <div id="contact-liste" data-role="page">
+            <div data-role="header">
+                <h1>Contact'Tel</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <a href="#contact-add" data-role="button" data-icon="plus" data-iconpos="right">Ajouter</a>
+                <ul id="ListeContact" data-role="listview" data-inset="true" 
+                data-filter="true" data-filter-placeholder="Rechercher un contact">
+                    <li>
+                        <a href="#contact-edit">
+                            <img src="img/imagesContact.png" alt="">
+                            <h1>Thiaba Diop</h1>
+                            <p>77 246 66 30</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact-edit">
+                            <img src="img/imagesContact.png" alt="">
+                            <h1>Cheikh</h1>
+                            <p>77 358 98 23</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>Mes Contacts</h3>
+            </div>
+        </div>
+        <!-- Details Contact -->
+        <div id="contact-edit" data-role="page">
+            <div data-role="header">
+                <a href="#contact-liste" data-icon="carat-l" data-iconpos="notext">Precedent</a>
+                <h1>Contact'Tel</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div data-role="header">
+                    <a href="" data-role="button" data-icon="edit" data-iconpos="notext" >Modifier</a>
+                    <a href="" data-role="button" data-icon="delete" data-iconpos="notext" >Supprimer</a>
+                    <h1>Details Contact</h1>
+                </div>
+                <ul id="DetailsContact" data-role="listview" data-inset="true" >
+
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>Mes Contacts</h3>
+            </div>
+
+        </div>
+        <!-- Page Ajout Contact -->
+        <div id="contact-add" data-role="page">
+            <div data-role="header">
+                <a href="#contact-liste" data-icon="carat-l" data-iconpos="notext" >Precedent</a>
+                <h1>Contact'Tel</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div data-role="header">
+                    <a href="#" data-role="button" data-icon="carat-d" data-iconpos="notext">Enregistrer</a>
+                    <h1>Nouveau Contact</h1>
+                </div>
+                <form action="">
+                    <label for="text-basic">Prenom</label>
+                    <input type="text" name="text-basic" id="text-basic" value="">
+                    <label for="text-basic">Nom</label>
+                    <input type="text" name="text-basic" id="text-basic" value="">
+                    <h1>Telephone</h1>
+                    <label for="tel">Mobile</label>
+                    <input type="tel" name="tel" id="tel" value="">
+                    <label for="tel">Domicile</label>
+                    <input type="tel" name="tel" id="tel" value="">
+                </form>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>Mes Contacts</h3>
+            </div>
+        </div>
+    </body>
+</html>
